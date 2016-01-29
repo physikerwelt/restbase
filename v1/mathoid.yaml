@@ -117,6 +117,7 @@ paths:
           enum:
             - svg
             - mml
+            - png
         - name: hash
           in: path
           description: The hash string of the previous POST data
@@ -145,6 +146,11 @@ paths:
             body:
               keyType: string
               valueType: string
+        - init_png:
+            uri: /wikimedia.org/sys/key_value/mathoid.png
+            body:
+              keyType: string
+              valueType: blob
       x-request-handler:
         - check_storage:
             request:
